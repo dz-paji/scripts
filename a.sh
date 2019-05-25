@@ -32,6 +32,7 @@ cd ~
 
 # use supervisor to guard proxy server
 
+echo_supervisord_conf > /etc/supervisord.conf
 echo "[program:shadowsocksr]" > /etc/supervisord.conf
 echo "command = python /root/shadowsocksr/server.py" >> /etc/supervisord.conf
 echo "directory=/root/shadowsocksr" >> /etc/supervisord.conf
