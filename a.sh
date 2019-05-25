@@ -4,7 +4,7 @@
 
 yum -y install epel-release
 yum -y update
-yum -y install mtr traceroute nano screen wget git supervisor cronie
+yum -y install mtr traceroute nano screen wget git supervisor cronie libsodium
 echo_supervisord_conf > /etc/supervisord.conf
 yum install -y zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
 openssl-devel xz xz-devel libffi-devel gcc readline readline-devel readline-static \
