@@ -30,24 +30,6 @@ cd shadowsocksr
 pip install -r requestment.txt
 cd ~
 
-# use supervisor to guard proxy server
-
-echo_supervisord_conf > /etc/supervisord.conf
-echo "[program:shadowsocksr]" >> /etc/supervisord.conf
-echo "command = python /root/shadowsocksr/server.py" >> /etc/supervisord.conf
-echo "directory=/root/shadowsocksr" >> /etc/supervisord.conf
-echo "startsecs=10" >> /etc/supervisord.conf
-echo "startretries=36" >> /etc/supervisord.conf
-echo "redirect_stderr=true" >> /etc/supervisord.conf
-echo "user = root" >> /etc/supervisord.conf
-echo "autostart = true" >> /etc/supervisord.conf
-echo "autoresart = true" >> /etc/supervisord.conf
-echo "stderr_logfile = /root/shadowsocksr/ss.stderr.log" >> /etc/supervisord.conf
-echo "stdout_logfile = /root/shadowsocksr/ss.stdout.log" >> /etc/supervisord.conf
-supervisord
-supervisorctl start all
-
-
 # set up bbr
 
 yum install centos-release-xen-48 -y
