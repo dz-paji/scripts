@@ -30,6 +30,11 @@ cd shadowsocksr
 pip install -r requestment.txt
 cd ~
 
+# gotop
+
+wget -qO- https://github.com/cjbassi/gotop/raw/master/scripts/download.sh | bash
+mv gotop /usr/local/bin
+
 # set up bbr
 
 yum install centos-release-xen-48 -y
